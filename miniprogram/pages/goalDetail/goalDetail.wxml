@@ -1,0 +1,52 @@
+<!--pages/goalDetail/goalDetail.wxml-->
+<view class="top">
+  <navigator open-type="redirect" url="../footprint/footprint">
+    <text class="back"> {{'<'}} </text>
+  </navigator>
+  <text class="back-txt">目标详细</text>
+</view>
+<view class="bg">
+  <view class="bgName">大目标名称：{{bgName}}</view>
+  <view class="bgBegin">大目标开始时间：{{bgBeginDate}}</view>
+  <view class="bgEnd">大目标结束时间：{{bgEndDate}}</view>
+  <view>全部天数：{{allday}}</view>
+  <view>实际打卡天数：{{doday}}</view>
+  <view>期望达到的打卡天数百分比：{{expectPercent}}%</view>
+  <view>实际达到的打卡天数百分比：{{actualPercent}}%</view>
+</view>
+
+<view class="bgs">
+  <view class="open-close">
+    <view id="showsum" bindtap="showsum">{{isshowsum? '展开查看大目标总结︿' : '展开查看大目标总结﹀'}}</view>
+  </view>
+  <view class="sgshow {{isshow?'sghide':''}}" hidden="{{!isshowsum}}">
+    <view wx:for="{{goalSummary}}">
+      <view>{{item}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="sg">
+  <view class="open-close">
+    <!-- <text bindtap="show">{{isshow? '收起'：'展开查看小目标'}}</text> -->
+    <view id="show" bindtap="show">{{isshow? '展开查看小目标︿' : '展开查看小目标﹀'}}</view>
+  </view>
+  <view class="sgshow {{isshow?'sghide':''}}" hidden="{{!isshow}}">
+    <view wx:for="{{smallGoal}}">
+      <view>{{item.sgName}}</view>
+      <view>{{item.endDate}}</view>
+    </view>
+  </view>
+  
+</view>
+
+<view class="record">
+  <view class="recordTtile">每日记录</view>
+  <view class="recordDate" wx:for="{{dateAndRecord}}">
+    <view class="date">{{item[0]}}</view>
+    <view wx:for="{{item[1]}}">
+      <view>你花了{{item.doHour}}分钟{{item.content}}</view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,35 @@
+<!--pages/makeBigGoal/makeBigGoal.wxml-->
+<view class="bg-wrapper">
+  <image class="bgImg" src="/images/bg2.jpg"></image>
+</view>
+<view class="page-body">
+  <view class="title">
+    <text>创建大目标</text>
+  </view>
+<form name="bigGoal" bindsubmit="addBigGoal">
+  <view class="page-section">
+      <view class="name"><text>大目标名称:</text></view>
+      <view class="inputName"><input class="innerName" name="goalName" placeholder="如：托福考到110" placeholder-class="myPlaceholder"></input></view>
+    </view>
+    <view class="page-section">
+      <view class="time"><text>预计完成时间:</text></view>
+      <view class="inputTime">
+        <picker name="predictDate" mode="date" value="{{date}}" start="{{today}}" end="{{endDay}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="section__title"><text>计划完成度(%)</text></view>
+        <view class="body-view">
+          <slider name="predictRate" bindchange="slider3change" show-value/>
+        </view>
+    </view>
+    <button class="ok-button" form-type="submit">完成创建</button>
+    <button class="return-button" bindtap="returnToIndex">退出创建</button>
+</form>
+
+</view>
+

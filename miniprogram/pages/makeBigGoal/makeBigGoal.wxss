@@ -1,0 +1,84 @@
+/* pages/makeBigGoal/makeBigGoal.wxss */
+.page-section{
+  height: 250rpx;
+  width: 100%;
+}
+
+.title{
+  text-align: center;
+  height: 80rpx;
+  font-size: large;
+  margin-top: 100rpx;
+}
+
+.name{
+  width: 700rpx;
+  margin: 0 auto;
+  font-size: medium;
+}
+
+.inputName{
+  height: 100rpx;
+  width: 700rpx;
+  border:1rpx solid gainsboro;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-top: 5rpx;
+}
+
+.innerName{
+  padding-left: 10rpx;
+  font-size: small;
+}
+
+.myPlaceholder{
+  font-size: smaller;
+  padding-left: 10rpx;
+}
+
+.time{
+  width: 700rpx;
+  margin: 0 auto;
+  font-size: medium;
+}
+
+.inputTime{
+  width: 700rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 5rpx;
+}
+
+.section__title{
+  width: 700rpx;
+  margin: 0 auto;
+  font-size: medium;
+}
+
+.body-view{
+  width: 700rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 5rpx;
+}
+
+.ok-button{
+  color: ghostwhite;
+  background-color: cadetblue;
+}
+
+.return-button{
+  color: gainsboro;
+}
+
+
+.bgImg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-999;
+  display: block;
+}

@@ -1,0 +1,431 @@
+/* pages/footprint/footprint.wxss */
+.arrow{
+  width: 8%;
+  height:8%;
+  position: absolute;
+  left:600rpx;
+}
+
+.eachProgressing{
+  height: 100rpx;
+  width: 637rpx;
+  border-bottom: 2rpx solid gray;
+  background-color: ghostwhite;
+  position: static;
+  /* left: 5rpx;
+  top: 700rpx; */
+  text-align: left;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  margin-left: 2vh;
+  font-weight: 500;
+  padding-left: 1vh;
+  padding-top: 1vh;
+}
+
+.goal-title{
+  width: 700rpx;
+  position: static;
+  text-align: center;
+  margin-top: 2vh;
+  background-color: #87CEFA;
+  border-radius:15rpx;
+  font-size: large;
+  font-weight: bold;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+
+}
+
+.title1{
+  height: 70rpx;
+  width: 650rpx;
+  position: static;
+  /* left: 5rpx;
+  top: 600rpx; */
+  border-bottom: grey;
+  background-color: rgb(35, 13, 112);
+  color: ghostwhite;
+  /* border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx; */
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  text-align: center;
+  margin-top: 2vh;
+  margin-left: 2vh;
+}
+
+.title2{
+  height: 70rpx;
+  width: 650rpx;
+  position: static;
+  border-bottom: grey;
+  background-color: cornflowerblue;
+  color: ghostwhite;
+  /* border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx; */
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  text-align: center;
+  margin-left: 2vh;
+  font-weight: medium;
+}
+
+.title3{
+  height: 70rpx;
+  width: 650rpx;
+  border-bottom: grey;
+  background-color:lightgray;
+  color: ghostwhite;
+  /* border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx; */
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  text-align: center;
+  margin-left: 2vh;
+  font-weight: medium;
+}
+
+/* .progressing{
+  width: 700rpx;
+  margin-top: 50vh;
+} */
+
+.book{
+  /* position: static; */
+  display:flex;
+  justify-content: left;
+  width: 700rpx;
+  height: 400rpx;
+  border-radius: 15rpx;
+  border-top-left-radius: 0rpx;
+  background-color: rgb(216,191,216);
+  margin: 0 auto;
+  overflow: scroll;
+  white-space:nowrap;
+}
+
+.viewOut{
+  /* display:flex; */
+  position: absolute;
+  justify-content: center;
+  width: 700rpx;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  top: 180rpx;
+  left: 25rpx;
+}
+
+.tujian{
+  width: 150rpx;
+  height: 55rpx;
+  background-color: rgb(216,191,216);
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  font-size: small;
+  padding-top: 5rpx;
+  font-weight: bold;
+}
+
+.scroll{
+  /* display:flex; */
+  position: static;
+  justify-content: center;
+  width: 100%;
+  height: 100rpx;
+  vertical-align: center;
+  border-bottom:2rpx solid gainsboro;
+}
+
+.fishImg{
+  display: inline-block;
+  height: 100rpx;
+  width: 100rpx;
+  text-align: left;
+}
+
+.intro{
+  position: absolute;
+  top: 175rpx;
+  left: 55rpx;
+  font-size: smaller;
+  text-align: left;
+}
+
+.fname{
+  height: 80rpx;
+}
+
+.fintro{
+  height:130rpx;
+  padding-right: 3vh;
+  display: block;
+  white-space: pre-line;
+}
+
+
+.flevel{
+  height: 50rpx;
+}
+
+.rule{
+  position: absolute;
+  left: 520rpx;
+  top: 380rpx;
+  font-size: small;
+  text-decoration: underline;
+}
+
+.showRule{
+  height: 70%;
+  width: 60%;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+
+.toastTitle{
+  background-color: deepskyblue;
+  padding-left: 5%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+  color: white;
+}
+
+.toastMain{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  background-color: whitesmoke;
+  text-align: left;
+  font-size: small;
+}
+
+
+.close{
+  font-size: smaller;
+  background-color:whitesmoke;
+  padding-bottom: 2vh;
+  border-bottom-left-radius:16rpx;
+  border-bottom-right-radius:16rpx;
+  text-decoration: underline;
+}
+
+/*展示用户等级*/
+/* .level-point{
+  height: 200rpx;
+  width: 97%;
+  margin-top: 2vh;
+  background-color: rgb(28, 189, 189);
+  font-size: small;
+  text-align: left;
+  padding-top: 3vh;
+  padding-left: 2vh;
+  border-radius: 15rpx;
+} */
+
+.level-point{
+  height: 250rpx;
+  width: 700rpx;
+  background-color: rgb(28, 189, 189);
+  position: static;
+  text-align: left;
+  padding-top: 2vh;
+  border-radius: 15rpx;
+  margin-top: 2vh;
+  font-size: small;
+}
+
+.my-level{
+  padding-left:2vh;
+}
+
+.level{
+  padding-left: 2vh;
+  padding-top: 2vh;
+}
+
+.point{
+  padding-left: 2vh;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.introduce{
+  font-size: smaller;
+  padding-top: 3vh;
+  padding-left: 2vh;
+}
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* 主页 */  
+.home {  
+  position: absolute;  
+  width: 750rpx;  
+  height: 100%;  
+  background-color: white;  
+  z-index: 1;  
+  transition: All 0.4s ease;  
+  -webkit-transition: All 0.4s ease;  
+}  
+.home .icon_user {  
+  width: 68rpx;  
+  height: 68rpx;  
+  margin-left: 20rpx;  
+  margin-top: 20rpx; 
+  position: fixed;
+  left: 10rpx;
+  top: 4%;
+}  
+
+/* .home .hello{
+  position: fixed;
+  left: 250rpx;
+  top: 80rpx
+} */
+
+.top-name{
+  width: 750rpx;
+  height: 10%;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  z-index: -1;
+}
+
+.hello{
+  position: relative;
+  top: 50%;
+}
+
+.home .create{
+  width: 68rpx;  
+  height: 68rpx;  
+  margin-right: 20rpx;  
+  margin-top: 20rpx; 
+  position: fixed;
+  left: 650rpx;
+}
+
+.goals{
+  position: fixed;
+  top: 100rpx
+}
+
+/* 遮罩层 */  
+.bg {    
+  display: none;    
+  position: fixed;    
+  top: 0%;    
+  left: 70%;    
+  width: 100%;    
+  height: 100%;    
+  background-color: black;    
+  z-index: 1001;    
+  -moz-opacity: 0.7;    
+  opacity: 0.70;    
+  transition:width 2s;  
+  filter: alpha(opacity=70);    
+}   
+ /* 侧滑栏 */  
+.page_tab {  
+  height: 100%;  
+  width: 750rpx;  
+  position: fixed;  
+  background-color: azure;  
+  z-index: 0;  
+  
+}  
+
+.page_tab_content .wc {  
+  color: #000;  
+  position: relative;  
+  font-size: 32rpx;  
+  padding: 20rpx 0 30rpx 20rpx;  
+}  
+  
+/*.page_tab_content button {  
+  width: 280rpx;  
+  background: #fb9817;  
+  color: #fff;  
+  position: relative;  
+  right: 120rpx;  
+  top: 150rpx;  
+  height: 60rpx;  
+  line-height: 60rpx;  
+} */
+
+.userinfo{
+  background-color: azure;
+  border:3rpx solid azure;
+}
+
+.page_tab_content image {  
+  display: inline-block;  
+  height: 40rpx;  
+  width: 40rpx;  
+  margin-right: 60rpx;
+  margin-left: 60rpx;
+}  
+  
+.page_tab_content{
+  position: absolute;
+  top: 240rpx;
+}
+
+.userinfo image{  
+  width: 110rpx;  
+  height: 110rpx;  
+  border-radius: 50%;  
+  text-align: left;  
+  margin: 150rpx 10rpx 150rpx 50rpx;
+  position: relative;
+  left:1rpx;
+  top:50rpx
+}  
+
+.userinfo-nickname {
+  position: absolute;
+  top: 120rpx;
+  left:220rpx;
+  color: #000;
+  background-color: azure;
+}
+
+.userinfo-days {
+  position: absolute;
+  top: 170rpx;
+  left: 220rpx;
+  font-size: small;
+}
+
+
+.unknown-nickname {
+  position: absolute;
+  top: 60rpx;
+  left: 250rpx;
+  color: #000;
+}
+
+.page_tab button{
+  position: absolute;
+  left: 50rpx;
+  top: 800rpx;
+}
+
+.top{
+  height: 120rpx;
+}

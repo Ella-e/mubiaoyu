@@ -1,0 +1,80 @@
+<!--pages/setting/setting.wxml-->
+<view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{img}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-days">已坚持{{userAllDay}}天</text>
+    </view>
+
+
+    <view class="page_tab_content">
+      <view bindtap="goIndex" class="wc">
+        <image src='../../images/flag.png'></image>
+        <text>首页</text>
+      </view>
+       <view bindtap="goFoot" class="wc">
+        <image src='../../images/tags.png'></image>
+        <text>足迹</text>
+      </view>
+      <view bindtap="goHelp" class="wc">
+          <image src='../../images/search1.png'></image>
+          <text>帮助</text>
+      </view>
+      <!-- <view bindtap="goSetting" class="wc">
+        <image src='../../images/wrench.png'></image>
+        <text>设置</text>
+      </view> -->
+      <view bindtap="goContact" class="wc">
+        <image src='../../images/service.png'></image>
+        <text>反馈</text>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 覆盖 -->
+  <view class="bg" bindtap='hideview' style='display:{{display}}'>
+  </view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <view class="top">
+      <image class='icon_user' bindtap='showview' src="../../images/btn.png"></image>
+      <text class="hello">设置</text>
+    </view>
+    <view class="homecontent1">
+      <!--pages/setting/settings.wxml-->
+      <view class="page">
+
+        <view class="setting">
+          <view class='text_wrap'>抗锯齿</view>
+          <view class='switch_wrap'>
+            <switch></switch>
+          </view>
+        </view>
+        
+        <view class="setting">
+          <view class='text_wrap'>4K分辨率</view>
+          <view class='switch_wrap'>
+            <switch></switch>
+          </view>
+        </view>
+
+        <view class="setting">
+          <view class='text_wrap'>垂直同步</view>
+          <view class='switch_wrap'>
+            <switch></switch>
+          </view>
+        </view>
+
+        <view class="setting">
+          <view class='text_wrap'>HDR</view>
+          <view class='switch_wrap'>
+            <switch></switch>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

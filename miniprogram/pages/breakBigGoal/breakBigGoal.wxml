@@ -1,0 +1,169 @@
+<!--pages/breakBigGoal/breakBigGoal.wxml-->
+<view class="top">
+  <navigator open-type="redirect" url="../index/index?login=1">
+    <text class="back"> {{'<'}} </text>
+  </navigator>
+  <text class="back-txt">分解目标/打卡</text>
+</view>
+<view class="wholeBone">
+  <!-- <view bindtap="goIndex">
+    <image class="back" src="/images/arrow_left.png"></image>
+    <text class="backtxt">点击返回首页</text>
+  </view> -->
+  <view class="mybone">
+    <view class="mainbone">
+      <view id="bigGoal"><text>{{bgName}}</text></view>
+      <view id="bgEndDate">
+        <text id="end">End </text>
+        <text>{{bgEndDate}}</text>
+      </view>
+      <image src="/images/myfishbone.png" id="fishbone"></image>
+    </view>
+    <view class="smallbones">
+      <view id="current">
+        <view class="now"><text>Begin</text></view>
+        <!-- <input placeholder="如：托福模考80分"></input> -->
+        <view class="beginDate"><text id="date">{{bgBeginDate}}</text></view>
+      </view>
+      <view class="smallgoals">
+         <view>
+           <button  id="b1" size="mini" bindtap="addGoalPop" data-id="{{1}}">修改1</button>
+           <view class="c1">
+             <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record" bindlongtap="delPop" data-id="{{1}}">{{sg1}}</view>
+             <view>{{d1}}</view>
+           </view>
+         </view>
+         <view>
+           <button id="b2" size="mini" bindtap="addGoalPop" data-id="{{2}}">修改2</button>
+           <view class="c2">
+             <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record"  bindlongtap="delPop" data-id="{{2}}">{{sg2}}</view>
+             <view>{{d2}}</view>
+           </view>
+         </view>
+          <view>
+            <button id="b3" size="mini" bindtap="addGoalPop" data-id="{{3}}">修改3</button>
+            <view class="c3">
+              <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record"  bindlongtap="delPop" data-id="{{3}}">{{sg3}}</view>
+              <view>{{d3}}</view>
+            </view>
+          </view>
+          <view>
+            <button id="b4" size="mini" bindtap="addGoalPop" data-id="{{4}}">修改4</button>
+            <view class="c4">
+              <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record"  bindlongtap="delPop" data-id="{{4}}">{{sg4}}</view>
+              <view>{{d4}}</view>
+            </view>
+          </view>
+          <view>
+            <button id="b5" size="mini" bindtap="addGoalPop" data-id="{{5}}">修改5</button>
+            <view class="c5">
+              <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record"  bindlongtap="delPop" data-id="{{5}}">{{sg5}}</view>
+              <view>{{d5}}</view>
+            </view>
+          </view>
+          <view>
+            <button id="b6" size="mini" bindtap="addGoalPop" data-id="{{6}}">修改6</button>
+            <view class="c6">
+              <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record"  bindlongtap="delPop" data-id="{{6}}">{{sg6}}</view>
+              <view>{{d6}}</view>
+            </view>
+          </view>
+          <view>
+            <button id="b7" size="mini" bindtap="addGoalPop" data-id="{{7}}">修改7</button>
+            <view class="c7">
+              <view bindtouchstart="touchStart" bindtouchend="touchEnd" bindtap="record"  bindlongtap="delPop" data-id="{{7}}">{{sg7}}</view>
+              <view>{{d7}}</view>
+            </view>
+          </view>
+      </view> 
+    </view>
+  </view>
+  <view class="rule" bindtap="showRule"><text>使用手册</text></view>
+  <!---使用手册--->
+  <view class="toast-box" hidden="{{!isshowRule}}">
+    <view class="toastbg"></view>
+    <view class="showToast">
+      <view class="ruleContent">
+        <view class="title"><text class="title-content">使用手册</text></view>
+        <view class="content">
+          <scroll-view class="scroll-view" scroll-y="true">
+            <text class="content-word">正同著名马拉松运动员山田本一所证明的那样，将大目标分解成一个个小目标有助于大目标的完成。在本页面，目标鱼提供了分解大目标的功能。让我们把鱼尾当做现在，鱼头当做你的大目标，在这期间你都需要完成什么小目标呢？
+            
+            功能及对应使用方法：
+            1.添加/修改：右侧点击对应鱼骨序号的修改按钮，添加/修改你的小目标吧！
+            2.删除：如果你觉得这个小目标设定有误的话，长按小目标内容把它删除掉吧。
+            3.添加每日完成记录：每天你都可以到这个页面来双击为之努力了的小目标添加每日记录。每日记录可以到我的-足迹-大目标里查看。
+            4.每日打卡：每日第一次添加每日完成记录默认为该目标完成打卡一天。最终打卡天数会影响大目标是否完成，一定要记得每日打卡哦。可以在我的-足迹-大目标里查看该大目标已进行打卡的天数。</text>
+          </scroll-view>
+          <view class="closeRule" bindtap="showRule">关闭</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="remind">双击小目标名称<text class="bold">打卡</text>/<text class="bold">添加记录</text>，<text class="bold">侧栏-足迹</text>查看记录</view>
+  
+  
+
+
+  <block wx:if="{{isShowConfirm}}">
+    <view class="toast-box">
+      <view class="toastbg"></view>
+      <view class="showToast">
+        <view class="toast-title">
+          <text class="toast-title-text">添加/修改小目标{{currentTarget.id}}</text>
+        </view>
+        <view class="toast-main">
+          <form bindsubmit="addSmallGoal">
+            <view class="toast-input">
+              <input maxlength="8" name="sgName" type="text" placeholder="小目标名称"></input>
+              <picker name="predictDate" mode="date" value="{{date}}" start="{{bgBeginDate}}" end="{{bgEndDate}}" bindchange="bindDateChange">
+                <view class="picker">
+                结束时间：{{date}}
+                </view>
+              </picker>
+            </view>
+            <view class="toast-button">
+                <view class="button1">
+                  <button catchtap="cancel">取消</button>
+                </view>
+                <view class="button2">
+                  <button form-type="submit">保存</button> 
+                </view>
+            </view>
+          </form>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{doubleShowConfirm}}">
+    <view class="toast-box">
+      <view class="toastbg"></view>
+      <view class="showToast">
+        <view class="toast-title">
+          <text class="toast-title-text">完成记录</text>
+        </view>
+        <view class="toast-main">
+          <form bindsubmit="submitRecord">
+            <view class="toast-input">
+              <view class="toast-input-textarea">
+                <textarea fixed="true" class="textarea" name="content" placeholder="记录下你今天为该小目标做出的努力吧" placeholder-class="mypl"></textarea>
+              </view>
+              <view class="input-time">
+              <input class="myinput" name="doHour" type="digit" placeholder="花了多长时间" placeholder-class="mypl"></input>
+                <view class="unit"><text>分钟</text></view>
+              </view>
+            </view>
+            <view class="toast-button">
+              <view class="button1">
+                <button catchtap="cancel">取消</button>
+              </view>
+              <view class="button2">
+                <button form-type="submit">保存</button>
+              </view>
+            </view>
+          </form>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

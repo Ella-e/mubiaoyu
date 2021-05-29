@@ -1,0 +1,116 @@
+<!--pages/footprint/footprint.wxml-->
+<view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{img}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-days">已使用{{userAllDay}}天</text>
+    </view>
+
+    <view class="page_tab_content">
+      <view bindtap="goIndex" class="wc">
+        <image src='../../images/flag.png'></image>
+        <text>首页</text>
+      </view>
+      <view bindtap="goFoot" class="wc">
+        <image src='../../images/tags.png'></image>
+        <text>足迹</text>
+      </view>
+      <view bindtap="goHelp" class="wc">
+          <image src='../../images/search1.png'></image>
+          <text>帮助</text>
+      </view>
+      <!-- <view bindtap="goSetting" class="wc">
+        <image src='../../images/wrench.png'></image>
+        <text>设置</text>
+      </view> -->
+      <view bindtap="goContact" class="wc">
+        <image src='../../images/service.png'></image>
+        <text>反馈</text>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 覆盖 -->
+  <view class="bg" bindtap='hideview' style='display:{{display}}'>
+  </view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <view class="top">
+      <image class='icon_user' bindtap='showview' src="../../images/btn.png"></image>
+      <view class="top-name">
+        <text class="hello">足迹</text>
+      </view>
+    </view>
+    <view class="viewOut">
+      <view class="tujian">图鉴</view>
+      <view class="book">
+        <scroll-view class="scroll" scroll-x="true" wx:for="{{showFishArr}}">
+          <image class="fishImg" src="{{item}}" bindtap="showInfo" data-url="{{item}}"></image>
+        </scroll-view>
+          <view class="intro">
+            <view class="fname">名称：{{fishName}}</view>
+            <view class="fintro"><text>简介：{{fishIntro}}</text></view>
+            <view class="flevel">等级：{{fishLevel}}</view>
+          </view>
+          <view class="rule" bindtap="changeShow">规则说明</view>
+      </view>
+      <!---展示用户当前等级和积分--->
+      
+      <view class="level-point">
+        <text class="my-level"><text class="bold">我的等级</text>-用于解锁图鉴里新的鱼类</text>
+        <view class="level">当前等级：{{level}}</view>
+        <view class="point">当前积分：{{point}}</view>
+        <view class="introduce">每得100分升一级，每日打卡写记录赚取积分</view>
+      </view>
+
+      <view class="goal-title">我的目标↓↓↓
+      <!-- 进行中的大目标 -->
+      <view class="progressing">
+        
+        <view class="title1"><text>进行中...</text></view>
+        <view class="eachProgressing" wx:for="{{progressingBg}}">
+          <navigator one-type="navigate" url="../goalDetail/goalDetail?goalId={{item._id}}&beginDate={{item.beginDate}}&endDate={{item.endDate}}&state={{item.state}}&bgName={{item.bGname}}&allday={{item.allday}}&doday={{item.doday}}&expectPercent={{item.expectPercent}}" hover-class="none">
+            <text>{{item.bGname}}</text>
+            <image class="arrow" src="/images/pixil-frame-0.png"/>
+          </navigator>
+        </view>
+      </view>
+      <!-- 已完成的大目标 -->
+      <view class="mydone">
+        <view  class="title2"><text>已完成</text></view>
+        <view class="eachProgressing" wx:for="{{doneBg}}">
+          <navigator one-type="navigate" url="../goalDetail/goalDetail?goalId={{item._id}}&beginDate={{item.beginDate}}&endDate={{item.endDate}}&state={{item.state}}&bgName={{item.bGname}}&allday={{item.allday}}&doday={{item.doday}}&expectPercent={{item.expectPercent}}&summary={{item.summary}}" hover-class="none">
+            <text>{{item.bGname}}</text>
+            <image class="arrow" src="/images/pixil-frame-0.png"/>
+          </navigator>
+        </view>
+      </view>
+      <!-- 未完成的大目标 -->
+      <view class="myunDone">
+        <view class="title3"><text>未完成</text></view>
+        <view class="eachProgressing" wx:for="{{unDoneBg}}">
+          <navigator one-type="navigate" url="../goalDetail/goalDetail?goalId={{item._id}}&beginDate={{item.beginDate}}&endDate={{item.endDate}}&state={{item.state}}&bgName={{item.bGname}}&allday={{item.allday}}&doday={{item.doday}}&expectPercent={{item.expectPercent}}&summary={{item.summary}}" hover-class="none">
+            <text>{{item.bGname}}</text>
+            <image class="arrow" src="/images/pixil-frame-0.png"/>
+          </navigator>
+        </view>
+      </view>
+      </view>
+
+        <view class="showRule" hidden="{{!isshow}}">
+          <view class="toastTitle"><text>鱼类收集图鉴</text></view>
+          <view class="toastMain">
+            <text class="innerMain">设置大目标时随机匹配对应等级的鱼。所有新用户都可匹配到1级的鱼。用户等级达到3级开启等级为2的鱼。用户等级达到7级开启等级为3的鱼。完成大目标后解锁对应鱼的图鉴页。</text>
+          </view>
+          <view class="close" bindtap="changeShow">关闭说明</view>
+        </view>  
+
+    </view>
+  </view>
+  
+</view>
+
+
+

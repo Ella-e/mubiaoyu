@@ -1,0 +1,47 @@
+/* pages/completeBigGoal/completeBigGoal.wxss */
+.a{
+  border: 1rpx solid #ddd;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 2vh;
+  width: 93%;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  margin-left: 0vh;
+}
+
+.q{
+  margin: 2vh;
+}
+
+.success{
+  background-color: azure;
+}
+
+.fail{
+  background-color: azure;
+}
+
+.submit-button{
+  background-color: #87CEFA;
+  margin:2vh;
+  width: 90%;
+  text-align: center;
+}
+
+/*顶部的渲染*/
+.top{
+  background-color: #87CEFA;
+  width: 100%;
+  height: 170rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.back-txt{
+  font-size: medium;
+  color: white;
+  position: absolute;
+  left: 25%;
+  top: 6%;
+}

@@ -1,0 +1,83 @@
+<!--pages/help/help.wxml-->
+<view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{img}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-days">已使用{{userAllDay}}天</text>
+    </view>
+
+
+    <view class="page_tab_content">
+      <view bindtap="goIndex" class="wc">
+        <image src='../../images/flag.png'></image>
+        <text>首页</text>
+      </view>
+       <view bindtap="goFoot" class="wc">
+        <image src='../../images/tags.png'></image>
+        <text>足迹</text>
+      </view>
+      <view bindtap="goHelp" class="wc">
+          <image src='../../images/search1.png'></image>
+          <text>帮助</text>
+      </view>
+      <!-- <view bindtap="goSetting" class="wc">
+        <image src='../../images/wrench.png'></image>
+        <text>设置</text>
+      </view> -->
+      <view bindtap="goContact" class="wc">
+        <image src='../../images/service.png'></image>
+        <text>反馈</text>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 覆盖 -->
+  <view class="bg" bindtap='hideview' style='display:{{display}}'>
+  </view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <view class="top">
+      <image class='icon_user' bindtap='showview' src="../../images/btn.png"></image>
+      <text class="hello">帮助</text>
+    </view>
+    <view class="homecontent1">
+      <scroll-view  class="h" scroll-y="true" style="height: 1250rpx; width: 700rpx" >
+        <view class='help1' >
+          <text class='text11'>左滑或点击三个横杠打开侧拉栏; 点击右下角的加号创建大目标</text>
+          <image class='image1' src="../../images/help1.jpg"></image>
+        </view>
+        <view class='help2'>
+          <image class="image2" src="../../images/help2.jpg"></image>
+          <text class="text21">这是侧拉栏的样子，点击可以跳转不同的页面</text>
+        </view>
+        <view class='help3'>
+          <image class="image3" src="../../images/help6.jpg"></image>
+          <text class="text31">这是创建大目标页面，计划完成度指的是你希望打卡的天数/大目标持续的时长;比如你的大目标将持续100天，你希望在这100天中能坚持打卡80天，那么你的计划完成度就是80%</text>
+        </view>
+        <view class='help6'>
+          <image class="image6" src="../../images/help5.jpg"></image>
+          <text class="text61">创建完大目标后，小程序会显示这个“鱼骨图”，你可以在这里分解大目标</text>
+        </view>
+        <view class='help4'>
+          <image class="image4" src="../../images/help3.jpg"></image>
+          <text class="text41">点击“修改1”，就可以创建第一个小目标啦！前往鱼骨图，点击“使用手册”查看更详细的说明噢</text>
+        </view>
+        <view class='help5'>
+          <image class="image5" src="../../images/help4.jpg"></image>
+          <text class="text51">成功创建目标后，首页会有一条大鱼。点击它，就可以快速来到鱼骨图。</text>
+        </view>
+        
+        <view class='help7'>
+          <image class="image7" src="../../images/help7.jpg"></image>
+          <text class="text71">双击鱼骨图的小目标日期，就可以打卡啦，长按日期还可以删除小目标！</text>
+        </view>
+        <view class='help8'>
+          <image class="image8" src="../../images/help8.jpg"></image>
+          <text class="text81">当你完成一个大目标时，可以打开足迹，查看自己进行中的目标，完成目标的经历和收集到的海洋生物哦。每天打卡会获得3点经验，升级就可以收集更“高级”的鱼了。如需详细的说明请前往足迹，点击规则说明。</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

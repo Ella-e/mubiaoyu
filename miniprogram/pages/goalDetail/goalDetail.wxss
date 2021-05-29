@@ -1,0 +1,93 @@
+/* pages/goalDetail/goalDetail.wxss */
+.bg{
+  height: 380rpx;
+  border-bottom: 2rpx solid gray;
+  background-color: darkblue;
+  color: ghostwhite;
+  margin: 20rpx 10rpx 10rpx 10rpx;
+  border-radius: 15rpx;
+  padding: 8rpx;
+}
+
+.top{
+  background-color: #87CEFA;
+  width: 100%;
+  height: 170rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.back{
+  color: white;
+  font-size: xx-large;
+  font-weight: bolder;
+  position: absolute;
+  top: 3%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.back-txt{
+  font-size: medium;
+  color: white;
+  position: absolute;
+  left: 25%;
+  top: 6%;
+}
+
+.sg{
+  background-color: lightgray;
+  border-radius: 15rpx;
+  margin: 10rpx;
+  padding: 8rpx;
+}
+
+#show{
+  background-color: dodgerblue;
+  text-align: center;
+  border-radius: 15rpx;
+  height: 80rpx;
+  padding-top: 5rpx;
+}
+
+.record{
+  background-color: ghostwhite;
+  margin: 10rpx;
+  border-radius: 15rpx;
+}
+
+.date{
+  background-color: darkseagreen;
+  text-align: center;
+  border-radius: 15rpx;
+}
+
+.recordDate{
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+}
+
+.recordTitle{
+  text-align: right;
+  background-color:blue;
+  border-top-left-radius: 70%;
+}
+
+.bgs{
+  background-color: lightgray;
+  border-radius: 15rpx;
+  margin: 10rpx;
+  padding: 8rpx;
+}
+
+#showsum{
+  background-color: dodgerblue;
+  text-align: center;
+  border-radius: 15rpx;
+  height: 80rpx;
+  padding-top: 5rpx;
+}
+
+
+
+

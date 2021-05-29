@@ -1,0 +1,425 @@
+/* pages/breakBigGoal/breakBigGoal.wxss */
+.mainbone{
+  text-align: center;
+}
+
+.wholebone{
+  width: 100%;
+  height: 100%;
+}
+
+.mybone{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 160rpx;
+}
+
+#fishbone{
+  position: absolute;
+  top:10rpx;
+  width:100%;
+  height:100%;
+  z-index:-999;
+  display: block;
+  background-color: #fff;
+  
+}
+
+.now{
+  font-weight: bold;
+  font-style: italic;
+  font-size: medium;
+}
+
+
+#bigGoal{
+  padding-top: 20rpx;
+}
+
+#bgEndDate{
+  padding-top: 5rpx;
+}
+
+#end{
+  font-weight: bold;
+  font-style: italic;
+  font-size: medium;
+}
+
+#current{
+  position: absolute;
+  left: 10%;
+  top: 80%;
+  font-size: small;
+}
+
+#b1{
+  position: absolute;
+  top:440rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: peachpuff;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c1{
+  position: absolute;
+  /* top:780rpx;
+  left:450rpx; */
+  top:62%;
+  left:30rpx;
+  font-size: small;
+}
+
+#b2{
+  position: absolute;
+  top:370rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: plum;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c2{
+  position: absolute;
+  top:62%;
+  left:450rpx;
+  font-size: small;
+}
+
+#b3{
+  position: absolute;
+  top:300rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: powderblue;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c3{
+  position: absolute;
+  top:51%;
+  left:30rpx;
+  font-size: small;
+}
+
+#b4{
+  position: absolute;
+  top:230rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: salmon;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c4{
+  position: absolute;
+  top:52%;
+  left:450rpx;
+  font-size: small;
+}
+
+#b5{
+  position: absolute;
+  top:160rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: whitesmoke;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c5{
+  position: absolute;
+  top:41%;
+  left:30rpx;
+  font-size: small;
+}
+
+#b6{
+  position: absolute;
+  top:90rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: thistle;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c6{
+  position: absolute;
+  top:41%;
+  left:450rpx;
+  font-size: small;
+}
+
+#b7{
+  position: absolute;
+  top:20rpx;
+  left:84%;
+  font-size: smaller;
+  background-color: wheat;
+  width: 150rpx;
+  text-align: left;
+}
+
+.c7{
+  position: absolute;
+  top:31%;
+  left:30rpx;
+  font-size: small;
+}
+
+#save{
+  position:absolute;
+  top:420px;
+  left:240px;
+  font-size: small;
+}
+
+.toast-box {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+
+.toastbg {
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.showToast {
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+
+.toast-title {
+  width: 550rpx;
+  /* padding-left: 5%; */
+  background-color: #2196f3;
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+}
+
+.toast-title-text{
+  padding-left: 5%;
+}
+
+.toast-main {
+  width: 550rpx;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+  text-align: center;
+}
+
+.toast-input {
+  margin-left: 5%;
+  margin-right: 5%;
+  /* border: 1px solid #ddd; */
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.toast-button {
+  display:flex;
+}
+
+.button1 {
+  width: 50%;
+}
+
+.button2 {
+  width: 50%;
+}
+
+.button1 button {
+  /* width: 80%; */
+  /* background-color: white; */
+  /* width: 275rpx; */
+  width: 100%;
+  color: red;
+  border-radius: 0px;
+  border-bottom-left-radius: 16rpx;
+}
+
+.button2 button{
+  /* width: 80%; */
+  /* background-color: white; */
+  /* width:275rpx; */
+  width: 100%;
+  color: black;
+  border-radius: 0px;
+  border-bottom-right-radius: 16rpx;
+}
+
+.toast-input-textarea{
+  width: 90%;
+  padding-left: 3vh;
+  border: 1px solid #ddd;
+  text-align: left;
+  display: block;
+  white-space: pre-line;
+}
+
+.textarea{
+  width: 300rpx;
+  padding: 2vh;
+  font-size: small;
+}
+
+.input-time{
+  border: 1rpx solid #ddd;
+  margin-top: 2vh;
+  text-align: left;
+  padding:2vh;
+  height: 50rpx;
+}
+
+.myinput{
+  width: 200rpx;
+  font-size: small;
+}
+
+.unit{
+  position: absolute;
+  top: 74.5%;
+  left: 73%;
+  font-size: small;
+}
+
+.mypl{
+  font-size: small;
+}
+
+.rule{
+  position: absolute;
+  top: 190rpx;
+  left: 20rpx;
+  font-size: small;
+  font-style: italic;
+  text-decoration:underline;
+}
+
+.ruleContent{
+  position: absolute;
+  border: 1rpx solid #ddd;
+  background-color: #fff;
+  width: 500rpx;
+  height: 600rpx;
+  left: 5%;
+  top: 3%;
+  border-radius: 15rpx;
+}
+
+.title{
+  height:20%;
+  width: 100%;
+  background-color: aqua;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.title-content{
+  margin: 2vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.content-word{
+  padding: 2vh;
+}
+
+.closeRule{
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  font-size: small;
+  font-style: italic;
+  text-decoration:underline;
+}
+
+.scroll-view{
+  height: 400rpx;
+  width: 90%;
+  padding: 2vh;
+}
+
+.back{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  left:3rpx;
+  top:150rpx
+}
+
+.backtxt{
+  font-size: smaller;
+  color:gainsboro;
+  position: absolute;
+  left: 15rpx;
+  top: 280rpx;
+}
+
+/*顶部的渲染*/
+.top{
+  background-color: #87CEFA;
+  width: 100%;
+  height: 170rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.back{
+  color: white;
+  font-size: xx-large;
+  font-weight: bolder;
+  position: absolute;
+  top: 3%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.back-txt{
+  font-size: medium;
+  color: white;
+  position: absolute;
+  left: 25%;
+  top: 6%;
+}
+
+.picker{
+  margin-top: 2vh;
+}
+
+.remind{
+  position: absolute;
+  left: 65%;
+  top: 85%;
+  font-size: small;
+  margin-right: 2vh;
+}
+
+.bold{
+  font-weight: bold;
+}

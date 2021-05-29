@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/makeBigGoal/makeBigGoal",
+    "pages/reminder/reminder",
+    "pages/completeBigGoal/completeBigGoal",
+    "pages/breakBigGoal/breakBigGoal",
+    "pages/footprint/footprint",
+    "pages/help/help",
+    "pages/setting/setting",
+    "pages/contactUs/contactUs",
+    "pages/goalDetail/goalDetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTitleText": "目标鱼",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "servicemarket": true
+  
+}

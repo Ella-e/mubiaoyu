@@ -1,0 +1,12 @@
+<!--pages/remember/remember.wxml-->
+<view class="page">
+  <view class="background">
+    <image src="../../images/bg2.jpg" mode="scaleToFill" style="width: 750rpx; height: 1500rpx;"></image>
+  </view>
+  <view class="text_wrap">自己定下的目标就一定要完成哦</view>
+  <view class="text_wrap_2">
+    <navigator url="../index/index?login=1" open-type="redirect">
+      <view>确定</view>
+    </navigator>
+  </view>
+</view>

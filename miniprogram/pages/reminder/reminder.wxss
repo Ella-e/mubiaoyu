@@ -1,0 +1,27 @@
+/* pages/reminder/reminder.wxss */
+.text_wrap{
+  text-align: center;
+  padding-top:400rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  height: 400rpx;
+  font-size: xx-large;
+}
+.text_wrap_2{
+  text-align: center;
+  margin-left: 200rpx;
+  margin-right: 200rpx;
+  border-width: 1rpx;
+  border-radius: 30rpx;
+  border-style: solid;
+}
+
+.back{
+  border-style: solid;
+}
+.background{
+  position:fixed;
+  z-index:-1;
+  height:1300rpx;
+
+}

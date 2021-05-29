@@ -1,0 +1,136 @@
+<!--index.wxml-->
+<view hidden="{{dologin}}"  class="whole-login">
+  <view wx:if="{{canIUse}}">
+    <view class="header">
+      <image src="/images/logo.png"></image>
+    </view>
+
+    <view class="content">
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息（昵称、头像等）</text>
+    </view>
+
+    <button class="bottom" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+
+
+<view  hidden="{{home}}" class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{img}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-days">已使用{{userAllDay}}天</text>
+    </view>
+
+    <view class="page_tab_content">
+      <view bindtap="goIndex" class="wc">
+        <image src='../../images/flag.png'></image>
+        <text>首页</text>
+      </view>
+      <view bindtap="goFoot" class="wc">
+        <image src='../../images/tags.png'></image>
+        <text>足迹</text>
+      </view>
+      <view bindtap="goHelp" class="wc">
+          <image src='../../images/search1.png'></image>
+          <text>帮助</text>
+      </view>
+      <!-- <view bindtap="goSetting" class="wc">
+        <image src='../../images/wrench.png'></image>
+        <text>设置</text>
+      </view> -->
+      <view bindtap="goContact" class="wc">
+        <image src='../../images/service.png'></image>
+        <text>反馈</text>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 覆盖 -->
+  <view class="bg" bindtap='hideview' style='display:{{display}}'>
+  </view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <view class="bg-wrapper">
+      <image class="bgImg" src="/images/background.png"></image>
+    </view>
+    <view class="top">
+      <image class='icon_user' bindtap='showview' src="../../images/btn.png"></image>
+      <view>
+        <view class="hello"><text class="hec">{{nickName}}的水族箱</text></view>
+      </view>
+      <image class='create' bindtap='goMakeBigGoal' src="../../images/add.png"> </image>
+    </view>
+    <view>
+      <image class='fish10' src="../../images/fish_big.png" ></image>
+      <image class='fish1' src="../../images/fish_ordinary.png" ></image>
+      <image class='fish2' src="../../images/fish_bigHead.png"></image>
+      <image class='fish4' src="../../images/fish_orange.png"></image>
+      <image class='fish5' src="../../images/fish_blue.png"></image>
+      <image class='fish6' src="../../images/fish_yellow.png"></image>
+      <image class='fish13' src="../../images/fish_green.png"></image>
+      <image class='fish11' src="../../images/fish_turtle.png"></image>
+    </view>
+     <button hidden="{{isHide}}" bindtap="dologin" class="login-btn">点击登录</button>
+    <view class="myFish" wx:for="{{myFishArr}}">
+    <!-- <text>{{item[1]}}</text> -->
+      <view class="oneimg">
+        <navigator one-type="navigate" url="../breakBigGoal/breakBigGoal?goalId={{item[0]}}" hover-class="none">
+          <image class="fishImg" data-id="{{item[0]}}" src="{{item[1]}}"></image>
+          <text>{{item[2]}}\n</text>
+          <text>当前完成率：{{item[3]}}%\n</text>
+          <text>剩余天数：{{item[4]}}</text>
+        </navigator>
+        <image class="imgFish" catchtap="delBigGoal" data-id="{{item[0]}}" src="/images/cross.png"></image>
+      </view>
+    </view>
+
+    <!---使用方法说明--->
+    <view class="rule-title">创建目标后，点击页面中<text class="bold">'静止的鱼'</text>进入目标分解页面~</view>
+    <!-- <view class="rule" hidden="{{!isshow}}">
+      <view class="rule-head">功能介绍</view>
+      <view class="rule-body">
+        <text class="rule-words">首页功能介绍：
+        1.打开导航栏：点击左上角按钮或右拉。
+        2.创建大目标：点击右上角按钮。
+        3.进入大目标分解页面：创建完大目标后，首页会显示自动匹配的海洋生物。点击海洋生物进入对应的大目标分解页面。
+        4.删除大目标：点击海洋生物右上角的叉×删除大目标。注意：当大目标下有小目标的时候该大目标不可删除。</text>
+        <view class="close-rule" bindtap="showRule">关闭</view>
+      </view>
+    </view> -->
+
+    <!--新手导航的遮罩层-->
+    <view class="mask" hidden="{{!showMask}}" bindtap="hideMask">
+      <image class='icon_user' bindtap="hhh" src="../../images/btn.png"></image>
+      <view class="tip1"> 
+        <image class="arrow1" src="/images/a2.png"></image>
+        <view class="text1">
+          点击此处创建大目标
+        </view>
+      </view>
+      <view class="tip2">
+        <image class="arrow2" src="/images/a1.png"></image>
+        <view class="text2">
+          点击此处打开侧栏
+        </view>
+      </view>
+      <view class="tip3">
+        <text>欢迎来到目标鱼，
+        一起来完成你的目标吧！</text>
+      </view>
+    </view>
+
+    <!--老用户登录的遮罩层-->
+    <view class="mask" hidden="{{!showMask2}}" bindtap="hideMask2">
+      <view class="use-word">路漫漫其修远兮，吾将上下而求索</view>
+      <view class="update"><text>9月26日更新：
+      1.优化目标分解页面的简介</text></view>
+    </view>
+    
+  </view>
+</view>

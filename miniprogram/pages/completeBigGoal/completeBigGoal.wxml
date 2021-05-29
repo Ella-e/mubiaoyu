@@ -1,0 +1,52 @@
+<!--pages/completeBigGoal/completeBigGoal.wxml-->
+<view class="success" hidden="{{!showSuccess}}">
+  <view class="top">
+    <text class="back-txt">目标总结</text>
+  </view>
+  <form onsubmit="addBigGoalSummary">
+    <text>恭喜你完成了大目标:{{bigGoal.bGname}}</text>
+    <view class="q">
+      <text>在完成大目标的过程中令你感觉最开心的一件事是什么？</text>
+      <textarea class="a" name="a1"></textarea>
+    </view>
+    <view class="q">
+      <text>在完成大目标的过程中令你感觉最辛苦的一件事是什么？</text>
+      <textarea class="a" name="a2"></textarea>
+    </view>
+    <view class="q">
+      <text>你在完成大目标的过程中获得了哪些帮助，或者你觉得有了哪些帮助目标会完成的更好</text>
+      <textarea class="a" name="a3"></textarea>
+    </view>
+    <view class="q">
+      <text>你通过这个目标学到了什么</text>
+      <textarea class="a" name="a4"></textarea>
+    </view>
+    <button class="submit-button" form-type="submit">提交总结</button>
+  </form>
+</view>
+
+<view class="fail" hidden="{{!showFail}}">
+  <view class="top">
+    <text class="back-txt">目标总结</text>
+  </view>
+  <form onsubmit="addBigGoalSummary">
+    <text>很遗憾，你没有完成大目标:{{bigGoal.bGname}}</text>
+    <view class="q">
+      <text>导致你没有完成大目标的原因是什么？</text>
+      <textarea class="a" name="a1"></textarea>
+    </view>
+    <view class="q">
+      <text>这个原因能否被解决，怎样解决？</text>
+      <textarea class="a" name="a2"></textarea>
+    </view>
+    <view class="q">
+      <text>你在完成大目标的过程中获得了哪些帮助，或者你觉得有了哪些帮助目标会完成的更好？</text>
+      <textarea class="a" name="a4"></textarea>
+    </view>
+    <view class="q">
+      <text>你通过这个目标学到了什么？</text>
+      <textarea class="a" name="a4"></textarea>
+    </view>
+    <button class="submit-button" form-type="submit">提交总结</button>
+  </form>
+</view>
